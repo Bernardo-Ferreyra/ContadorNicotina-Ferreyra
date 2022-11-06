@@ -15,11 +15,11 @@ validar();
 
 function validar() {
   let validacion = prompt(`Bienvenido ${nombre} , es usted fumador? SI - NO`).toLocaleLowerCase()
-  if(validacion == "si"){
+  if(validacion === "si"){
     alert("A continuacion te pediremos algunos datos para determinar tus estadisticas de nicotina")
     validarEdad()
   }
-  else if (validacion == "no"){
+  else if (validacion === "no"){
     alert("Gracias por contestar, esta aplicacion es solo para fumadores")
     nombre = prompt("Hola, ingresa tu nombre")
     validar()
@@ -29,6 +29,8 @@ function validar() {
     validar()
   }  
 };
+
+
 
 function validarEdad(){
   let edad = parseInt(prompt("Ingresa tu edad porfavor"))
@@ -45,6 +47,8 @@ function validarEdad(){
     validarEdad()
   }
 };
+
+
 
 
 function correr() {
